@@ -1,0 +1,173 @@
+.searchbar-div {
+  display: flex;
+  justify-content: center;
+  align-items: center!important;
+}
+
+.profile-nav {
+  /* width: fit-content!important; */
+  margin-right: 15px;
+}
+
+.deals {
+  display: flex;
+  padding: 0 25px 10px;
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent content from wrapping to the next line */
+}
+
+.scroll-left {
+  position: absolute;
+  padding: 10px;
+  text-align: center;
+  top: 45%;
+  left: 20px;
+}
+
+.scroll-right {
+  position: absolute;
+  padding: 10px;
+  text-align: center;
+  top: 45%;
+  right: 20px;
+}
+
+/* For WebKit (Chrome, Safari) */
+.deals::-webkit-scrollbar {
+  height: 5px;
+}
+
+.deals::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.deals::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+.deals::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.deals-container {
+  width: 100%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+  position: relative;
+  text-align: center;
+}
+
+main {
+  /* display: flex;
+  justify-content: center; */
+  margin-top: 56px;
+  width: 100%;
+}
+
+.deal-card {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 0 5px;
+  min-width: 200px;
+}
+
+.product-card {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 0 5px 10px;
+  /* min-width: 200px;
+  max-width: 200px; */
+  /* width: 30%; */
+  padding: 10px;
+}
+
+.single {
+  width: 90%;
+}
+
+.double {
+  width: 45%;
+}
+
+.triple {
+  width: 30%;
+}
+.content-container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.topic-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: none;
+  border: 1px solid black;
+}
+
+.topics-container {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+  max-width: 300px;
+  position: sticky;
+  top: 56px;
+}
+
+.result-container {
+  flex-grow: 1;
+  display: flex;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+.product-container {
+  flex-grow: 1;
+  display: flex;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+  max-width: 300px;
+  position: sticky;
+  top: 56px;
+}
+
+footer {
+  height: 300px;
+  background-color: grey;
+}
+
+.profile-container {
+  display: flex;
+}
+
+.order-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-card {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.orders-title {
+  padding: 10px;
+}
+
+.filter-container {
+  padding: 0 0 0 25px;
+}
+
+.cart-btn {
+  margin-left: 15px;
+}

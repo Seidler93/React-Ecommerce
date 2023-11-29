@@ -20,7 +20,7 @@ const resolvers = {
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate('thoughts');
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw AuthenticationError;
     },
   },
 
@@ -31,6 +31,7 @@ const resolvers = {
       return { token, user };
     },
     login: async (parent, { email, password }) => {
+      console.log('clicked');
       const user = await User.findOne({ email });
 
       if (!user) {
@@ -44,6 +45,7 @@ const resolvers = {
       }
 
       const token = signToken(user);
+      console.log({ token, user });
 
       return { token, user };
     },

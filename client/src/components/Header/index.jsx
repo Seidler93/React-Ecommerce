@@ -20,10 +20,10 @@ export default function Header () {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/profile">
+              <Link className="btn btn-light m-2" to="/profile">
                 {Auth.getProfile().data.username}'s Profile
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <button className="btn btn-light m-2" onClick={logout}>
                 Logout
               </button>
             </>

@@ -1,4 +1,6 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,7 +10,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { Outlet } from 'react-router-dom';
 
-import Header from './components/Header';
+import Header from './components/Header/index';
 import Footer from './components/Footer';
 
 // Construct our main GraphQL API endpoint
@@ -38,13 +40,11 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="flex-column justify-flex-start min-100-vh">
-        <Header />
-        <div className="container">
-          <Outlet />
-        </div>
-        <Footer />
+      <Header />
+      <div className="container">
+        <Outlet />
       </div>
+      <Footer />
     </ApolloProvider>
   );
 }

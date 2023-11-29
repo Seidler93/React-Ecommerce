@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 import Searchbar from './Searchbar';
+import CartBtn from './CartBtn';
 
 export default function Header () {
   const logout = (e) => {
@@ -10,7 +11,7 @@ export default function Header () {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
@@ -29,16 +30,17 @@ export default function Header () {
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
+              <Link className="btn btn-light m-2" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="btn btn-light m-2" to="/signup">
                 Signup
               </Link>
             </>
           )}
         </div>
        <Searchbar/>
+       <CartBtn/>
       </div>
     </nav>
   );

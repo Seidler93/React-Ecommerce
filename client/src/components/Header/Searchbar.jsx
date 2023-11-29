@@ -16,18 +16,10 @@ export default function Searchbar () {
     console.log(input);
   }
 
-  return (      
-    <div>
-      <form action="" onSubmit={handleSearch}>
-        <input 
-          type="text" 
-          name="searchbar" 
-          placeholder="Search..."
-          value={input} 
-          onChange={handleChange}
-        />
-        <button type='submit'>Search</button>
-      </form>
-    </div>
+  return (     
+    <form className="form-inline my-2 my-lg-0 d-flex" onSubmit={handleSearch}>
+      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={handleChange}/>
+      <button className="btn btn-outline-success my-2 my-sm-0 ms-2" type="submit">Search</button>
+    </form>
   );
 };

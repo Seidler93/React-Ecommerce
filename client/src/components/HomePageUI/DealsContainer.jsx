@@ -1,5 +1,7 @@
 import Deal from './DealCard'
-import React, { useRef } from 'react';
+import { useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight, faArrowLeft, faDumbbell, faCheck } from "@fortawesome/free-solid-svg-icons"
 
 const products = [
   { id: 1, name: 'T-shirt', description: 'This is a T-shirt.', price: 65 },
@@ -45,11 +47,11 @@ export default function DealsContainer() {
     <>
       <section className="deals-container">
         <h2>Deals</h2>
-          <button onClick={() => handleScroll('left')} className='scroll-left'>&#129144;</button>
+          <button onClick={() => handleScroll('left')} className='scroll-left arrow'><FontAwesomeIcon icon={faArrowLeft} /></button>
         <div ref={containerRef} className='deals'>
           <Deal deals={products}/>
         </div>
-          <button onClick={() => handleScroll('right')} className='scroll-right'>&#129146;</button>
+          <button onClick={() => handleScroll('right')} className='scroll-right arrow'><FontAwesomeIcon icon={faArrowRight} /></button>
       </section>
     </>
   )

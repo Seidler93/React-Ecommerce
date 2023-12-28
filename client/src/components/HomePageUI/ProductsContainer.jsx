@@ -54,7 +54,7 @@ export default function ProductsContainer() {
   return (
     <>
       <section >
-        <DisplayFilter filterOptions={filterOptions} setFilter={setFilter}/>
+        <DisplayFilter filter={filter} filterOptions={filterOptions} setFilter={setFilter}/>
         <div className='product-container'>          
           <Product products={products} filter={filter} filterOptions={filterOptions}/>
         </div>

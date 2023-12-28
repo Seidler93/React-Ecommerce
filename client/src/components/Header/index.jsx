@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
-
+import logo from '../../assets/logo.png'
 import Auth from '../../utils/auth';
 import Searchbar from './Searchbar';
 import CartBtn from './CartBtn';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMessage, faBars, faDumbbell, faCheck } from "@fortawesome/free-solid-svg-icons"
 
 export default function Header () {
   const logout = (e) => {
@@ -14,9 +16,9 @@ export default function Header () {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
-          <Link className="text-light" to="/">
-            <h1 className="m-0">Logo</h1>
-          </Link>
+          <div className="logo-container" to="/">
+            <img className='logo' src={logo} alt="" />
+          </div>
         </div>
         <div>
           {Auth.loggedIn() ? (

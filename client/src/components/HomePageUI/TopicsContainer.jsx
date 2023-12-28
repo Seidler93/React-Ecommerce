@@ -14,7 +14,7 @@ const topics = [
 
 export default function TopicsContainer(props) {
   return (
-    <div className="topics-container">
+    <div className="topics-container bg-dark">
       {topics.map((topic, index) => (
         <button 
           key={topic.id}

@@ -94,6 +94,7 @@ main {
 .triple {
   width: 30%;
 }
+
 .content-container {
   width: 100%;
   display: flex;
@@ -105,8 +106,19 @@ main {
   width: 100%;
   padding: 10px;
   border-radius: none;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border: none;
+  background-color: transparent;
+  color: white;
 }
+
+.topic-btn:hover {
+  background-color: grey;
+}
+
+/* .topic-btn:active {
+  background-color: blue;
+} */
 
 .topics-container {
   display: flex;
@@ -115,6 +127,7 @@ main {
   max-width: 300px;
   position: sticky;
   top: 4.5rem;
+  height: 100%;
 }
 
 .result-container {

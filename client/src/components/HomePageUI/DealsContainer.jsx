@@ -2,6 +2,7 @@ import Deal from './DealCard'
 import { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faArrowLeft, faDumbbell, faCheck } from "@fortawesome/free-solid-svg-icons"
+import { motion } from 'framer-motion';
 
 const products = [
   { id: 1, name: 'T-shirt', description: 'This is a T-shirt.', price: 65 },
@@ -20,6 +21,8 @@ const products = [
   { id: 14, name: 'Umbrella', description: 'This is an umbrella.', price: 18 },
   { id: 15, name: 'Dress', description: 'This is a dress.', price: 85 },
 ];
+
+const animationTime = 0.15;
 
 export default function DealsContainer() {
   const containerRef = useRef(null);
@@ -47,12 +50,27 @@ export default function DealsContainer() {
     <>
       <section className="deals-container">
         <h2>Deals</h2>
-          <button onClick={() => handleScroll('left')} className='scroll-left arrow'><FontAwesomeIcon icon={faArrowLeft} /></button>
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          transition={{ duration: animationTime }}
+          onClick={() => handleScroll('left')}
+          className='scroll-left arrow'
+        >
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </motion.button>
         <div ref={containerRef} className='deals'>
           <Deal deals={products}/>
         </div>
-          <button onClick={() => handleScroll('right')} className='scroll-right arrow'><FontAwesomeIcon icon={faArrowRight} /></button>
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          transition={{ duration: animationTime }}
+          onClick={() => handleScroll('right')}
+          className='scroll-right arrow'
+        >
+          <FontAwesomeIcon icon={faArrowRight} />
+        </motion.button>
       </section>
     </>
   )
 }
+

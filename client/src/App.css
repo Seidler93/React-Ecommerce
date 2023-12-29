@@ -239,6 +239,7 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.selected-filter,
 .filter-choice {
   background-color: transparent;
   border: none;
@@ -249,11 +250,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.15s
 }
 
 .filter-choice:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: #88888833;
+  background-color: #dadada;
 }
 
 .active {
@@ -269,4 +271,12 @@ nav {
   height: 50%;
   width: auto;
   background-color: white;
+}
+
+.dropdown-menu-item {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+  font-size: var(--bs-dropdown-font-size);
 }

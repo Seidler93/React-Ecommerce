@@ -1,6 +1,6 @@
 import Product from './productCard'
 import DisplayFilter from './displayFilter';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const products = [
   { id: 1, name: 'T-shirt', description: 'This is a T-shirt.', price: 25 },
@@ -49,7 +49,7 @@ const products = [
 
 export default function ProductsContainer() {
   const filterOptions = ['single', 'double', 'triple']
-  const [filter, setFilter] = useState('double');
+  const [filter, setFilter] = useState(filterOptions[1]);
 
   return (
     <>

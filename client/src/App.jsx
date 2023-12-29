@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import UserProvider from '../src/utils/UserContext';
 import {
   ApolloClient,
   InMemoryCache,
@@ -40,9 +40,11 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Header />
-        <Outlet />
-      <Footer />
+      <UserProvider>
+        <Header />
+          <Outlet />
+        <Footer />
+      </UserProvider>
     </ApolloProvider>
   );
 }

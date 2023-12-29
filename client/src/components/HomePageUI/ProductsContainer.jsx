@@ -55,8 +55,8 @@ export default function ProductsContainer() {
     <>
       <section >
         <DisplayFilter filter={filter} filterOptions={filterOptions} setFilter={setFilter}/>
-        <div className='product-container'>          
-          <Product products={products} filter={filter} filterOptions={filterOptions}/>
+        <div className='product-container'>
+          {products.map((product) => <Product product={product} filter={filter} filterOptions={filterOptions}/> )}
         </div>
       </section>
     </>

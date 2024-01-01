@@ -17,7 +17,7 @@ export default function Searchbar () {
   }
 
   return (     
-    <form className="form-inline my-2 my-lg-0 d-flex" onSubmit={handleSearch}>
+    <form className="form-inline my-2 my-lg-0 d-flex flex-fill px-2" onSubmit={handleSearch}>
       <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={handleChange}/>
       <button className="btn btn-outline-success my-2 my-sm-0 ms-2" type="submit">Search</button>
     </form>

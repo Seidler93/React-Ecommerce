@@ -14,13 +14,14 @@ export default function Header () {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div className="container flex-row justify-space-around justify-center align-center">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top justify-content-center">
+      <div className="my-nav ps-2 me-3">
         <div>
           <div className="logo-container" to="/">
             <img className='logo' src={logo} alt="" />
           </div>
         </div>
+        <Searchbar/>
         <div>
           {Auth.loggedIn() ? (
             <>
@@ -39,9 +40,10 @@ export default function Header () {
             </>
           )}
         </div>
-       <Searchbar/>
-       <CartBtn/>
-       <HeaderDropDown/>
+        <div className='d-flex'>
+          <CartBtn/>
+          <HeaderDropDown/>
+       </div>
       </div>
     </nav>
   );

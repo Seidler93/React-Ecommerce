@@ -1,5 +1,5 @@
-import Product from './productCard'
-import DisplayFilter from './displayFilter';
+import Product from './ProductCard'
+import DisplayFilter from './DisplayFilter';
 import { useState, useEffect } from 'react';
 
 const products = [
@@ -56,7 +56,7 @@ export default function ProductsContainer() {
       <section >
         <DisplayFilter filter={filter} filterOptions={filterOptions} setFilter={setFilter}/>
         <div className='product-container'>
-          {products.map((product) => <Product product={product} filter={filter} filterOptions={filterOptions}/> )}
+          {products.map((product, index) => <Product key={index} product={product} filter={filter} filterOptions={filterOptions}/> )}
         </div>
       </section>
     </>

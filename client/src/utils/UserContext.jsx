@@ -6,7 +6,7 @@ const UserContext = createContext();
 export const useUserContext = () => useContext(UserContext)
 
 const UserProvider = (props) => {
-  const [cart, setCart] = useState(0)
+  const [cart, setCart] = useState([])
 
   // Example function to update the user context
   // const updateUser = async (newUser) => {

@@ -11,8 +11,21 @@ export default function ProductCard({ product, filter, filterOptions }) {
   };
 
   const handleAddToCart = () => {
-    setCart(cart + 1)
+    const foundProductIndex = cart.findIndex((cartProduct) => cartProduct.id === product.id);
+  
+    if (foundProductIndex !== -1) {
+      // Product is already in the cart
+      const updatedCart = [...cart];
+      updatedCart[foundProductIndex].amount += 1;
+      setCart(updatedCart);
+    } else {
+      // Product is not in the cart
+      const newProduct = { ...product, amount: 1 };
+      const updatedCart = [...cart, newProduct];
+      setCart(updatedCart);
+    }
   };
+  
 
   return (
     <>

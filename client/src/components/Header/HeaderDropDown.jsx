@@ -41,8 +41,9 @@ export default function HeaderDropDown () {
               </Link>                  
             </>
           )}
-        <Dropdown.Item href="/login">Action 2</Dropdown.Item>
-        <Dropdown.Item to="#/action-3">Action 3</Dropdown.Item>
+        <Link className="dropdown-menu-item dropdown-item" to="/signup">
+          Help
+        </Link> 
       </Dropdown.Menu>
     </Dropdown>
   );

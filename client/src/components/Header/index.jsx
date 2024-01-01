@@ -17,9 +17,9 @@ export default function Header () {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top justify-content-center">
       <div className="my-nav ps-2 me-3">
         <div>
-          <div className="logo-container" to="/">
+          <Link className="logo-container" to={'/'}>
             <img className='logo' src={logo} alt="" />
-          </div>
+          </Link>
         </div>
         <Searchbar/>
         <div>

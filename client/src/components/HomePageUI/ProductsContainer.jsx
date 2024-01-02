@@ -1,6 +1,9 @@
 import Product from './ProductCard'
 import DisplayFilter from './DisplayFilter';
 import { useState, useEffect } from 'react';
+import RedShirt from '../../assets/products/RedShirt.png'
+import BlueShirt from '../../assets/products/BlueShirt.png'
+import GreenShirt from '../../assets/products/GreenShirt.png'
 
 const products = [
   { id: 1, name: 'T-shirt', description: 'This is a T-shirt.', price: 25 },

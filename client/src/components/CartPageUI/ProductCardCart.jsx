@@ -68,7 +68,7 @@ export default function ProductCard({ product }) {
               />
               <button onClick={handleIncrease} className='increase-btn'>+</button>
             </div>
-            <button onClick={handleDelete} className='product-btn ms-2'>
+            <button onClick={handleDelete} className='count-btn ms-2'>
               Delete
             </button>
           </div>

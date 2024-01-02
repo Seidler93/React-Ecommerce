@@ -12,16 +12,24 @@ export default function CartPage() {
     return null; // The map function expects a return value for each iteration
   });
 
+  const handlePlaceOrder = () => {
+    setCart([])
+  }
+
   return (
     <div className="cart-container">
       <h1>Cart</h1>
+        { cartTotal === 0 && <h5 className="empty">Your cart is empty</h5>}
       <div className="d-flex align-items-start justify-content-start">
         <div className="mx-4 d-flex flex-column flex-grow-1">
           {cart.map((item, index) => (
             <ProductCard key={index} product={item}/>
           ))}
         </div>
-        <h2 className="text-center w20 total-containter">Total: ${cartTotal}</h2>
+        { cartTotal > 0 && <div className="total-containter">
+          <h2 className="">Total: ${cartTotal}</h2>
+          <button className="count-btn" onClick={handlePlaceOrder}>Place Order</button>
+        </div>}
       </div>
     </div>
   );

@@ -41,8 +41,10 @@ export default function ProductCard({ product, filter, filterOptions }) {
         <h3>{product.name}</h3>
         <p>${product.price}</p>
         <p>{product.description}</p>
-        <button onClick={handleQuickView} className='product-btn'>Quick View</button>
-        <button onClick={handleAddToCart} className='product-btn ms-2'>Add To Cart</button>
+        <div className='d-flex flex-wrap'>
+          <button onClick={handleQuickView} className='product-btn'>Quick View</button>
+          <button onClick={handleAddToCart} className='product-btn'>Add To Cart</button>
+        </div>
       </div>
       {isQuickViewClicked && 
         <motion.div

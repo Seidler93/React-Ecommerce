@@ -4,7 +4,7 @@ const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
-    <footer className="w-100 mt-auto bg-secondary p-4">
+    <footer className="w-100 mt-auto bg-secondary p-4 bg-dark">
       <div className="container text-center mb-5">
         {location.pathname !== '/' && (
           <button
@@ -15,16 +15,7 @@ const Footer = () => {
           </button>
         )}
         <h4>
-          Made with{' '}
-          <span
-            className="emoji"
-            role="img"
-            aria-label="heart"
-            aria-hidden="false"
-          >
-            ❤️
-          </span>{' '}
-          by the Tech Thoughts team.
+          Put actual footer content here
         </h4>
       </div>
     </footer>
